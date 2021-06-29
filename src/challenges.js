@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-one-iteration-loop */
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(valorUm, valorDois) {
   if (valorUm === true && valorDois === true) {
@@ -32,8 +34,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  
+function highestCount(numero) {
+  let conferidorMaior = numero[0];
+  let contador = 0;
+  for (let i = numero.length - 1; i >= 0; i -= 1) {
+    if (conferidorMaior < numero[i]) {
+      conferidorMaior = numero[i];
+    }
+  }
+  for (let i2 = numero.length - 1; i2 >= 0; i2 -= 1) {
+    if (conferidorMaior === numero[i2]) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
 
 // Desafio 7
