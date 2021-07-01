@@ -1,5 +1,3 @@
-/* eslint-disable sonarjs/no-one-iteration-loop */
-/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(valorUm, valorDois) {
   if (valorUm === true && valorDois === true) {
@@ -37,12 +35,12 @@ function footballPoints(wins, ties) {
 function highestCount(numero) {
   let conferidorMaior = numero[0];
   let contador = 0;
-  for (let i = numero.length - 1; i >= 0; i -= 1) {
+  for (let i = 0; i < numero.length; i += 1) {
     if (conferidorMaior < numero[i]) {
       conferidorMaior = numero[i];
     }
   }
-  for (let i2 = numero.length - 1; i2 >= 0; i2 -= 1) {
+  for (let i2 = 0; i2 < numero.length; i2 += 1) {
     if (conferidorMaior === numero[i2]) {
       contador += 1;
     }
@@ -83,15 +81,15 @@ function fizzBuzz(numero) {
 function encode(string) {
   let laranja = '';
   for (let i = 0; i < string.length; i += 1) {
-    if ('a' === string[i]) {
+    if (string[i] === 'a') {
       laranja += '1';
-    } else if ('e' === string[i]) {
+    } else if (string[i] === 'e') {
       laranja += '2';
-    } else if ('i' === string[i]) {
+    } else if (string[i] === 'i') {
       laranja += '3';
-    } else if ('o' === string[i]) {
+    } else if (string[i] === 'o') {
       laranja += '4';
-    } else if ('u' === string[i]) {
+    } else if (string[i] === 'u') {
       laranja += '5';
     } else {
       laranja += string[i];
@@ -103,15 +101,15 @@ function encode(string) {
 function decode(laranja) {
   let string = '';
   for (let i = 0; i < laranja.length; i += 1) {
-    if ('1' === laranja[i]) {
+    if (laranja[i] === '1') {
       string += 'a';
-    } else if ('2' === laranja[i]) {
+    } else if (laranja[i] === '2') {
       string += 'e';
-    } else if ('3' === laranja[i]) {
+    } else if (laranja[i] === '3') {
       string += 'i';
-    } else if ('4' === laranja[i]) {
+    } else if (laranja[i] === '4') {
       string += 'o';
-    } else if ('5' === laranja[i]) {
+    } else if (laranja[i] === '5') {
       string += 'u';
     } else {
       string += laranja[i];

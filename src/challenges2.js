@@ -1,6 +1,19 @@
 // Desafio 10
-function techList() {
-  // seu código aqu
+function techList(array, name) {
+  let listaLaranja = [];
+  array.sort();
+
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
+
+  for (let recebe of array) {
+    listaLaranja.push({
+      tech: recebe,
+      name: name
+    });
+  }
+  return listaLaranja;
 }
 
 // Desafio 11
