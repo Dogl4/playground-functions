@@ -56,12 +56,19 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
   return true;
-
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(cerveja) {
+  cerveja = cerveja.match(/\d+/g);
+  let agua = 0;
+  for (let key of cerveja) {
+    agua += parseInt(key);
+  }
+  if (agua > 1) {
+    return `${agua} copos de água`;
+  }
+  return `${agua} copo de água`;
 }
 
 module.exports = {
