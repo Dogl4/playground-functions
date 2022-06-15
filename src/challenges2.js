@@ -52,7 +52,14 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA > lineB + lineC || lineA < Math.abs(lineB - lineC) || lineB > lineA + lineC || lineB < Math.abs(lineC - lineA) || lineC > lineA + lineB || lineC < Math.abs(lineA - lineB)) {
+  if (
+    lineA > lineB + lineC ||
+    lineA < Math.abs(lineB - lineC) ||
+    lineB > lineA + lineC ||
+    lineB < Math.abs(lineC - lineA) ||
+    lineC > lineA + lineB ||
+    lineC < Math.abs(lineA - lineB)
+  ) {
     return false;
   }
   return true;

@@ -27,7 +27,7 @@ function concatName(ultimoPrimeiro) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = (wins * 3) + ties;
+  let pontos = wins * 3 + ties;
   return pontos;
 }
 
